@@ -1,0 +1,27 @@
+name: Daily Lesson Notification
+
+# Note: GitHub may pause scheduled workflows after 60 days of repository inactivity.
+# If this happens, you can re-enable them in the Actions tab.
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # 08:00 Asia/Dhaka time
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Send notification
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: python notify/daily_lesson.py
