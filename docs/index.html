@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV From Scratch</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <!-- Meta tags for PWA -->
+    <meta name="theme-color" content="#212121">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <header>
+        <h1>CV From Scratch</h1>
+        <div class="controls">
+            <button id="prev-btn">&lt; Prev</button>
+            <span id="day-display">Day ?</span>
+            <button id="next-btn">Next &gt;</button>
+        </div>
+    </header>
+
+    <main id="content">
+        <h2 id="lesson-title">Loading...</h2>
+        <p id="lesson-summary"></p>
+
+        <div id="code-link-container">
+            <a id="code-link" href="#" target="_blank" rel="noopener noreferrer">View Source Code</a>
+        </div>
+
+        <div id="figures-container">
+            <!-- Figures will be injected here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>A daily computer vision learning journey.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

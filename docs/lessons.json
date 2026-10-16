@@ -1,0 +1,118 @@
+{
+  "start_date": "2026-10-17",
+  "timezone": "Asia/Dhaka",
+  "lessons": [
+    {
+      "day": 1,
+      "title": "Images as Arrays",
+      "summary": "Images are just grids of numbers representing pixel intensities. We will learn how to inspect these numbers as numpy arrays. We'll also see the difference between RGB and grayscale images.",
+      "script": "lessons/01_images_arrays.py",
+      "figures": [
+        "01_rgb_vs_gray.png"
+      ]
+    },
+    {
+      "day": 2,
+      "title": "Color Spaces",
+      "summary": "RGB is not the only way to represent color. Color spaces like HSV and LAB separate color information from brightness. This makes color-based object segmentation much more robust.",
+      "script": "lessons/02_color_spaces.py",
+      "figures": [
+        "02_color_spaces.png",
+        "02_segmentation.png"
+      ]
+    },
+    {
+      "day": 3,
+      "title": "Histograms",
+      "summary": "A histogram shows the distribution of pixel intensities in an image. Contrast stretching spreads out these intensities to improve visibility. Histogram equalization flattens the distribution for even more contrast enhancement.",
+      "script": "lessons/03_histograms.py",
+      "figures": [
+        "03_histograms.png"
+      ]
+    },
+    {
+      "day": 4,
+      "title": "Convolution",
+      "summary": "Convolution is the process of sliding a small kernel over an image to apply effects. We will implement convolution from scratch in numpy. We'll compare our blur and sharpen kernels against OpenCV's optimized implementation.",
+      "script": "lessons/04_convolution.py",
+      "figures": [
+        "04_convolution.png"
+      ]
+    },
+    {
+      "day": 5,
+      "title": "Edge Detection",
+      "summary": "Edges occur where pixel intensities change rapidly. We will build a Sobel edge detector from scratch to compute image gradients. Then, we will explore the powerful Canny edge detection algorithm.",
+      "script": "lessons/05_edge_detection.py",
+      "figures": [
+        "05_sobel.png",
+        "05_canny.png"
+      ]
+    },
+    {
+      "day": 6,
+      "title": "Thresholding and Morphology",
+      "summary": "Thresholding turns a grayscale image into a binary mask. Morphological operations like erosion and dilation help clean up noise in these masks. We can combine them into opening and closing operations for robust region selection.",
+      "script": "lessons/06_thresholding_morphology.py",
+      "figures": [
+        "06_thresholding.png",
+        "06_morphology.png"
+      ]
+    },
+    {
+      "day": 7,
+      "title": "Contours and Shape Measurements",
+      "summary": "Contours trace the outlines of objects in binary images. Connected components labeling helps separate and identify distinct regions. We can compute simple shape properties like area and perimeter from these components.",
+      "script": "lessons/07_contours.py",
+      "figures": [
+        "07_contours.png"
+      ]
+    },
+    {
+      "day": 8,
+      "title": "Harris Corner Detection",
+      "summary": "Corners are image features that vary significantly in all directions. The Harris corner detector identifies these points using local gradients. We will implement this algorithm completely from scratch.",
+      "script": "lessons/08_harris_corners.py",
+      "figures": [
+        "08_harris.png"
+      ]
+    },
+    {
+      "day": 9,
+      "title": "Template Matching",
+      "summary": "Template matching finds a small image patch within a larger image. It slides the template around and computes a similarity score at each position. This is a simple but effective technique for object detection.",
+      "script": "lessons/09_template_matching.py",
+      "figures": [
+        "09_template.png"
+      ]
+    },
+    {
+      "day": 10,
+      "title": "Hough Transform",
+      "summary": "The Hough transform is a technique for finding perfect shapes like lines and circles. It works by casting votes in a parameter space. The peaks in this parameter space correspond to the shapes found in the image.",
+      "script": "lessons/10_hough_transform.py",
+      "figures": [
+        "10_hough_lines.png",
+        "10_hough_circles.png"
+      ]
+    },
+    {
+      "day": 11,
+      "title": "Feature Detection and Matching",
+      "summary": "ORB is a fast algorithm for detecting and describing keypoints in an image. These descriptions can be used to match features across different images. This forms the basis for tasks like image stitching and tracking.",
+      "script": "lessons/11_orb_features.py",
+      "figures": [
+        "11_orb.png"
+      ]
+    },
+    {
+      "day": 12,
+      "title": "HOG Features and SVM",
+      "summary": "Histogram of Oriented Gradients (HOG) is a powerful feature descriptor for shape representation. We will extract HOG features from a synthetic dataset of shapes. Finally, we'll train a Support Vector Machine (SVM) to classify them and evaluate its accuracy.",
+      "script": "lessons/12_hog_svm.py",
+      "figures": [
+        "12_confusion_matrix.png"
+      ]
+    }
+  ]
+}
