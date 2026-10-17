@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cv-from-scratch-v2d236285';
+const CACHE_NAME = 'cv-from-scratch-ved99053d';
 const URLS_TO_CACHE = [
   './',
   'index.html',
